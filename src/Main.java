@@ -6,21 +6,26 @@ public class Main {
 
         // (1) Declaration
         double inputTemp;
-        double maxTemp = -100; // So far the maximum temperature ...
+        double maxTemp = 0.0; // So far the maximum temperature ...
 
+        int sentinel = 1;
 
-        int count = 1;  // counting in the loop
         Scanner in = new Scanner(System.in);
 
 
         // (2) Getting validating input TODO split this into input and (3) processing/computing
-        System.out.println("Input a temperature");
-        inputTemp = in.nextDouble();
-        System.out.println("inputTemp is "+inputTemp);
 
-        while (count < 1)  // TODO set another limit
+        while (true)  // TODO set another limit
         {
-            // TODO process the temperatures etc...
+            System.out.println("Input a temperature, to stop write 0");
+            inputTemp = in.nextDouble();
+            sentinel = (int) inputTemp;
+            if (sentinel==0){
+                // get out of the loop please!!!!
+                break;
+            }
+            System.out.println("inputTemp is "+inputTemp);
+
         }
 
         // (4) Presenting output
